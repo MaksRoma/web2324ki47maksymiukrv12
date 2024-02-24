@@ -14,4 +14,4 @@ Add authentification Using Google API
 # Task 5
 Create fraud site (in this case - fishing site)
 
-# Technology stack: PHP
+# Technology stack: PHP, JavaScript, HTML, CSS, MySQL
