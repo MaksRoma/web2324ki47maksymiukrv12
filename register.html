@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <!-- metadata and styling -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roman Maksymiuk - Registration</title>
+  <link rel="stylesheet" href="login_register.css">
+</head>
+
+<body>
+  <!-- Registration form -->
+  <div class="container">
+    <div class="wrapper">
+      <div class="title"><span>Registration</span></div>
+      <!-- Form handling with JavaScript -->
+      <form id="register-form" onsubmit="event.preventDefault(); registerUser();">
+        <!-- Username input -->
+        <div class="row">
+          <i class="fa-user"></i>
+          <input type="text" id="register-username" name="username" placeholder="Username" required autocomplete="username">
+        </div>
+        <!-- Password input -->
+        <div class="row">
+          <i class="fa-lock"></i>
+          <input type="password" id="register-password" name="password" placeholder="Password" required autocomplete="current-password">
+        </div>
+        <!-- Registration button -->
+        <div class="row button">
+          <input type="submit" value="Register">
+        </div>
+        <!-- Login with Google button -->
+        <div class="row button">
+          <a id="google-login-btn" type="button" class="login-with-google-btn" href="#">Login with Google</a>
+        </div>
+        <!-- Display area for registration messages -->
+        <div id="auth-message-register" class="auth-message">
+          <div class="auth-message-content">
+            <p id="auth-message-content-register"></p>
+          </div>
+        </div>
+        <!-- Link to the login page -->
+        <div class="signup-link">Already registered? <a href="login">Sign in</a></div>
+      </form>
+    </div>
+  </div>
+  <!-- JavaScript file for form functionality -->
+  <script src="scripts.js"></script>
+</body>
+
+</html>

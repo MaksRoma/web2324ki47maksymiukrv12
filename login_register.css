@@ -1,0 +1,218 @@
+/* Reset default margin, padding, and box-sizing */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+
+/* Set body background and hide overflow */
+body{
+  background: white;
+  overflow: hidden;
+}
+
+/* Define selection color */
+::selection{
+  background: rgba(26,188,156,0.3);
+}
+
+/* Container styling */
+.container{
+  max-width: 440px;
+  padding: 0 20px;
+  margin: 170px auto;
+}
+
+/* Wrapper styling */
+.wrapper{
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
+}
+
+/* Title styling within the wrapper */
+.wrapper .title{
+  height: 90px;
+  background: linear-gradient(45deg, #FF69B4, #4B0082);
+  border-radius: 5px 5px 0 0;
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Form styling within the wrapper */
+.wrapper form{
+  padding: 30px 25px 25px 25px;
+}
+
+/* Row styling within the form */
+.wrapper form .row{
+  height: 45px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+/* Input field styling within the row */
+.wrapper form .row input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 60px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+/* Input field focus styling */
+form .row input:focus{
+  border-color: #FF69B4;
+}
+
+/* Icon styling within the row */
+.wrapper form .row i{
+  position: absolute;
+  width: 47px;
+  height: 100%;
+  color: #fff;
+  font-size: 18px;
+  background: linear-gradient(45deg, #FF69B4, #4B0082);
+  border: 1px solid #FF69B4;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Password row styling */
+.wrapper form .pass{
+  margin: -8px 0 20px 0;
+}
+
+/* Password link styling */
+.wrapper form .pass a{
+  color: #16a085;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+/* Password link hover styling */
+.wrapper form .pass a:hover{
+  text-decoration: underline;
+}
+
+/* Button styling within the form */
+.wrapper form .button input{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 0px;
+  background: linear-gradient(45deg, #FF69B4, #4B0082);
+  border: 1px solid linear-gradient(45deg, #FF69B4, #4B0082);
+  cursor: pointer;
+}
+
+/* Button hover effect */
+.wrapper form .button input:hover {
+  transform: scale(1.05);
+}
+
+/* Signup link styling */
+.wrapper form .signup-link{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 17px;
+}
+
+/* Signup link anchor styling */
+.wrapper form .signup-link a {
+  color: linear-gradient(45deg, #FF69B4, #4B0082);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Signup link hover styling */
+.wrapper form .signup-link a:hover {
+  color: #4B0082;
+  text-decoration: underline;
+}
+
+/* Username icon styling */
+.wrapper form .row i.fa-user::before {
+  content: '📝'; /* Pen emoji for username */
+}
+
+/* Password icon styling */
+.wrapper form .row i.fa-lock::before {
+  content: '🔒'; /* Lock emoji for password */
+}
+
+/* Styling for the authentication message */
+.auth-message {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 16px;
+  display: none;
+  animation: fadeInOut 0.5s ease-out;
+}
+
+/* Content styling within the authentication message */
+.auth-message-content {
+  text-align: center;
+}
+
+/* Paragraph styling within the authentication message */
+.auth-message p {
+  margin-bottom: 10px;
+}
+
+/* Error message styling */
+.auth-message.error {
+  background: #e74c3c;
+}
+
+/* Success message styling */
+.auth-message.success {
+  background: #2ecc71;
+}
+
+/* Google login button styling */
+.login-with-google-btn {
+    display: block;
+    width: 100%;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    padding: 12px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 -1px 0 rgb(0 0 0 / 4%), 0 1px 1px rgb(0 0 0 / 25%);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=);
+    background-repeat: no-repeat;
+    background-position: 12px 50%;
+    background-size: 24px; /* Adjust the size of the Google logo */
+    text-decoration: none;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #4c4f4d;
+}
+
+/* Keyframes for fadeInOut animation */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

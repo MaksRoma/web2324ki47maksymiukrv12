@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <!-- Meta tags for character set and viewport -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Title and link to external stylesheet -->
+  <title>Roman Maksymiuk - Login</title>
+  <link rel="stylesheet" href="login_register.css">
+</head>
+
+<body>
+  <!-- Main container -->
+  <div class="container">
+    <div class="wrapper">
+      <!-- Title section -->
+      <div class="title"><span>Login</span></div>
+      <!-- Login form -->
+      <form id="login-form" onsubmit="loginUser(); return false;">
+        <!-- Username input -->
+        <div class="row">
+          <i class="fa-user"></i>
+          <input type="text" id="login-username" name="username" placeholder="Username" required autocomplete="username">
+        </div>
+        <!-- Password input -->
+        <div class="row">
+          <i class="fa-lock"></i>
+          <input type="password" id="login-password" name="password" placeholder="Password" required
+            autocomplete="current-password">
+        </div>
+        <!-- Login button -->
+        <div class="row button">
+          <input type="submit" value="Login">
+        </div>
+        <!-- Login with Google button -->
+        <div class="row button">
+          <a id="google-login-btn" type="button" class="login-with-google-btn" href="#">Login with Google</a>
+        </div>
+        <!-- Authentication message section -->
+        <div id="auth-message-login" class="auth-message">
+          <div class="auth-message-content">
+            <p id="auth-message-content-login"></p>
+          </div>
+        </div>
+        <!-- Signup link -->
+        <div class="signup-link">Not a member? <a href="register">Signup now</a></div>
+      </form>
+    </div>
+  </div>
+  <!-- Script tag for JavaScript file -->
+  <script src="scripts.js"></script>
+</body>
+
+</html>
