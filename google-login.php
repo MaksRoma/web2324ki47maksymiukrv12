@@ -15,3 +15,4 @@ $authUrl = $client->createAuthUrl();
 echo json_encode(['success' => true, 'authUrl' => $authUrl]);
 exit;
 ?>
+
